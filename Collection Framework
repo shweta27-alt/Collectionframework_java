@@ -1,0 +1,231 @@
+ArrayList
+ArrayList<String> shoppingCart = new ArrayList<>();
+
+Functions :
+al.size()
+al.add(element)
+al.addAll( Collection c )
+al.get(index)
+al.contains() //bool
+al.set(position, element);
+al.indexOf(element)
+al.lastIndexOf()
+al.remove(index)
+al.clear()
+
+//Converting list to array
+Object[] namesArray = names.toArray();
+
+
+
+Array
+int[] myArray = new int [10];
+int[] a = {2,3,8,9,4};
+
+Functions:
+a.length
+a.clone
+a.equals
+a.toString
+Arrays.sort()
+
+
+
+String
+String class implements interfaces serializable, comparable,Charsequence
+s.charAt(index)
+s.equals(string:s2)
+s.equalsIgnoreCase(string:s2)
+s.contains(substring)
+s.concat(string:s2)
+s.length()
+s.toCharArray()  -> char[] ch=s1.toCharArray();  
+s.trim()
+s.toLowerCase()
+s.toUpperCase()
+s.replace(char oldChar, char newChar)  //diff is just that in replaceall we can replace strings and in replace only char
+s.replaceAll() ->  String replaceString=s1.replaceAll("a","e");//replaces all occurrences of "a" to "e"  
+s.startsWith() ->  System.out.println(s1.startsWith("ja"));  // true  
+s.endsWith() 
+s.intern() -> 
+
+
+s.isEmpty()
+s.split() 
+String[] words=s1.split("\\s");//splits the string based on whitespace 
+String[] words=s1.split("\\s",2)  //splits the string on whitespaces but only in two. After first 2 words in two strings remaining everything will come in 3rd string.
+System.out.println(String.format("%.6f", pos));//returns pos fractional part filling with 0 upto 6 . Keep the pos datatype in float  
+
+s.indexOf(char), s.indexOf(char, int fromindex),
+s.indexOf(substring), s.indexOf(substring, int fromindex) 
+
+String.valueOf( int || float || boolean || ….)
+s.subString(start index, end index) or s.subString(start index)
+s.compareTo(s2) or s.compareToIgnoreCase(s2)
+0 -> equal 
+< 0 -> -ve -> s < s2
+> 0 -> +ve -> s > s2  
+
+String Buffer
+StringBuffer sb=new StringBuffer("Hello ");  
+For mutable strings, you can use StringBuffer and StringBuilder classes.
+s.append(String s);
+s.insert(offset , String s);
+s.replace( start index, end index, string s);
+s.delete(  start index, end index );
+s.deleteCharAt( index )
+s.reverse();
+s.charAt(index);
+s.length();
+s.subString(begin index) || s.subString( begin index, end index);
+
+
+Character 
+Character.isDigit(str.charAt(i))
+Character.toUpperCase(i)
+int castAscii = (int) ch;
+
+
+Date
+ s.charAt
+
+
+
+Iterator<String> i = ts.iterator();
+        while (i.hasNext())
+            System.out.println(i.next());
+
+List
+List<Integer> li = new ArrayList<>();
+
+int size(): to get the number of elements in the list.
+boolean isEmpty(): to check if list is empty or not.
+boolean contains(Object o): Returns true if this list contains the specified element.
+Iterator<E> iterator(): Returns an iterator over the elements in this list in proper sequence.
+Object[] toArray(): Returns an array containing all of the elements in this list in proper sequence
+boolean add(E e): Appends the specified element to the end of this list.
+boolean remove(Object o): Removes the first occurrence of the specified element from this list.
+boolean retainAll(Collection<?> c): Retains only the elements in this list that are contained in the specified collection.
+void clear(): Removes all the elements from the list.
+E get(int index): Returns the element at the specified position in the list.
+E set(int index, E element): Replaces the element at the specified position in the list with the specified element.
+ListIterator<E> listIterator(): Returns a list iterator over the elements in the list.
+List<E> subList(int fromIndex, int toIndex): Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive. The returned list is backed by this list, so non-structural changes in the returned list are reflected in this list, and vice-versa
+
+List to array
+int[] can = new int[candles.size()];
+for(int i = 0; i < can.length; i++)
+      can[i] = candles.get(i);
+
+
+
+
+Character conversions
+
+Character.isDigit( input.charAt() );
+
+
+
+Output: name is
+
+hashCode() and equals()
+Student s1 =  new Student( “A” ,3 );
+Student s2 = new Student (“A”, 5);
+Student s4 = s1;
+
+sysout(s1.equals (s2)); //false – checked according to memory location not on value
+sysout(s1.equals (s2));  //false
+sysout(s1.equals (s4));  //true
+
+sysout(s1.hashcode ());  
+sysout(s2.hashcode ());  
+sysout(s4.hashcode ()); //same as for s1 
+
+HashMap
+Map <String,String> hm = new HashMap<>();
+
+hm.put(“yash”,”yeole”);  //one key one value if same key occurs value gets replaced
+hm.remove(“yash”); //it returns the removed value
+hm.replace(“yash”,”manohar”);
+hm.get(Object key);
+hm.size() , hm.clear(), hm.isEmpty()
+for(String key: hm.keySet(){
+	sysout(key + “-” + hm.get(key));
+} 
+
+LinkedHashMap
+
+
+LinkedHashMap< Integer, String> val = new LinkedHashMap< Integer,String> ();
+
+val.put(1,”a”);
+
+//here we convert the map view to a set view of data
+Set set = val.entrySet(); 
+
+Iterator it = set.iterator();
+while(it.hasNext())
+	Map.Entry me = (Map.Entry) it.next();
+	Sysout (“key is” + me.getKey() + “val is” + me.getValue());
+
+TreeMap
+
+
+
+
+
+Set
+Set <String> value = new HashSet<String>();
+
+HashSet
+Set <String> value = new HashSet<String>();
+value.add(“I”); //no duplicate values
+value.remove(“I”);
+Iterator<String> i = value.iterator();
+while(i.hasNext())
+	sysout(i.next());
+value.contains(object);
+—----------
+HashSet <Integer> value1 = new HashSet<Integer>();
+value1.addAll ( Arrays.asList(new Integer[] {1,3,2,4,5,6,7,9}) );
+sysout(value1);
+HashSet <Integer> value2 = new HashSet<Integer>();
+value2.addAll ( Arrays.asList(new Integer[] {1,3,2,4,5,6}) );
+sysout(value2);
+
+HashSet <Integer> intersection = new HashSet<Integer>(val1);
+intersection.retainAll ( val2 );
+sysout(intersection);
+HashSet <Integer> union = new HashSet<Integer>(val1);
+union.addAll ( val2 );
+sysout(union);
+HashSet <Integer> difference = new HashSet<Integer>(val1);
+difference.removeAll ( val2 );
+sysout(difference);
+
+Sorted Set
+SortedSet <String> ts = new SortedSet <String> ();
+
+ts.add();
+ts.remove();
+ts.first();
+ts.last();
+ts.size()
+ts.headSet();
+LinkedHashSet
+Set< String> val = new LinkedHashSet< String> ();
+
+val.put(”a”);
+val.put(”d”);
+val.put(”b”);
+
+Iterator it = val.iterator();
+while(it.hasNext())
+	Sysout (itnext());
+
+TreeSet
+Set<String> uniqueItems = new TreeSet<String>();
+
+
+
+
